@@ -78,6 +78,14 @@ SUM(FactCompanyMetrics[totalDebt_USDmm]) / 1000
 
 The full record of cleaning decisions is in `data_cleaning_log.md`.
 
+## Reproducing the Cleaned Data
+
+The cleaned dataset is generated from the raw file by the Python script.
+To reproduce it, place financialdata.xlsx in the same folder and run:
+
+    python clean_financial_data.py
+
+This outputs financialdata_cleaned.xlsx and a cleaning log.
 ## How to Open
 
 1. Download `Finance_dashboard.pbix`.
@@ -86,12 +94,14 @@ The full record of cleaning decisions is in `data_cleaning_log.md`.
 
 ## Repository Contents
 
-```
-capital-structure-dashboard/
-  README.md                      This file
-  Finance_dashboard.pbix         The Power BI dashboard
-  financialdata_cleaned.xlsx     Cleaned source dataset
-  dashboard-preview.png          Dashboard screenshot
-  data_cleaning_log.md           Record of cleaning decisions
-  ModernFinanceDark_Theme.json   Power BI theme file
-```
+    capital-structure-wacc-dashboard/
+      README.md                      This file
+      Problem_Statement.md           Project problem statement
+      Finance dashboard.pbix         The Power BI dashboard
+      clean_financial_data.py        Python cleaning script
+      financialdata.xlsx             Raw source data
+      financialdata_cleaned.xlsx     Cleaned dataset used by the dashboard
+      dashboard-preview.png          Dashboard screenshot
+      data_cleaning_log.md           Record of cleaning decisions
+      ModernFinanceDark_Theme.json   Power BI theme file
+      LICENSE                        MIT license
